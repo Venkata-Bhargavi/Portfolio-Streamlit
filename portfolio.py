@@ -1,5 +1,11 @@
+import json
 import streamlit as st
 import pandas as pd
+import requests
+from PIL import Image
+from streamlit_lottie import st_lottie
+import webbrowser
+
 # The code below is for the layout of the page
 st.set_page_config(  # Alternate names: setup_page, page, layout
     layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
@@ -7,6 +13,15 @@ st.set_page_config(  # Alternate names: setup_page, page, layout
     page_title='Venkata_Bhargavi_Sikhakolli',  # String or None. Strings get appended with "• Streamlit".
     page_icon= None,  # String, anything supported by st.image, or None.
 )
+def load_lottiefile(filepath:str):
+    with open(filepath,"r") as f:
+        return json.load(f)
+def load_lottieurl(url:str):
+    r = requests.get(url)
+    if r.status_code !=200:
+        return None
+    return r.json()
+
 # st.set_page_config(page_title="My Tabs", page_icon=":guardsman:", layout="wide")
 
 tab_styles = """
@@ -18,17 +33,51 @@ tab_styles = """
 
 # home, work_ex, pro, blog, skills, about, contact = st.tabs(["Home", "Work Experience", "Project", "Blog", "Skills", "About", "Contact"])
 home,work_ex, pro, Blog,skills,about,contact = st.tabs(["🏠 Home","👩‍💻 Work Experience", "⚙ ️Project", "✍️ Blog","🤹🏽 Skills","🧑 About","📞 Contact"]   )
-
+# below code works when clicked home
 with home:
-    st.markdown("")
-    st.markdown("")
-    st.markdown("")
-    st.markdown("")
-    st.markdown("")
-    st.markdown("")
-    st.markdown("<h1 style='font-size: 60px; text-align: center'>Hi, I'm Bhargavi👋</h1>", unsafe_allow_html=True)
-    st.markdown("")
-    st.markdown("<p style='font-size: 20px; text-align: center'>This portfolio is a collection of my work and achievements, showcasing my skills and abilities in my field of expertise. Here you will find a variety of <span style='color: orange;'>projects</span>, case studies, and other examples of my work. I hope you find it informative and I would be glad to discuss any of the works presented here. Thank you!</p>", unsafe_allow_html=True)
+    col1, col2 = st.columns([1, 1])
+    # col1  in home
+    with col1:
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("<h1 style='font-size: 60px; text-align: center'>Hi, I'm Bhargavi</h1>", unsafe_allow_html=True)
+        st.markdown("")
+        st.markdown(
+            "<p style='font-size: 20px; text-align: center'>This portfolio is a collection of my work and achievements, showcasing my <span style='color: orange;'>skills</span> and abilities in my field of expertise. Here you will find a variety of <span style='color: orange;'>projects</span>, case studies, and other examples of my <span style='color: orange;'>work</span>. I hope you find it informative and I would be glad to discuss any of the works presented here. Thank you!</p>",unsafe_allow_html=True)
+        # res_button = st.button("SEE MY RESUME")
+    def open_link(url):
+        webbrowser.open_new_tab(url)
+    res_col,link_col = st.columns([1,8]) #columns for buttons
+    with res_col:
+        res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
+        res_button = st.button("SEE MY RESUME")
+        if res_button:
+            open_link(res_url)
+    with link_col:
+        linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
+        linkedin_button = st.button("LINKEDIN")
+        if linkedin_button:
+            open_link(linkedin_url)
+
+    # col 2 in home
+    with col2:
+        st.markdown("")
+        st.markdown("")
+        lottie_hello = load_lottieurl("https://assets2.lottiefiles.com/private_files/lf30_rdkbjlef.json")
+        st_lottie(
+            lottie_hello,
+            speed=1,
+            reverse=False,
+            loop=True,
+            height="450px",
+            width=None,
+            key=None,
+        )
+
 
 with work_ex:
     # st.markdown('Streamlit is **_really_ cool**.')
@@ -55,16 +104,23 @@ with work_ex:
     st.markdown("")
     st.markdown("")
 
-    col1, col2, col3 = st.beta_columns([1, 6, 1])
+
+    col1, col2, col3 = st.columns([1, 1, 1])
 
     with col1:
-        st.write("")
+        st.image("Utils/Images/buddi.png")
 
     with col2:
-        st.image("https://i.imgflip.com/amucx.jpg")
+        st.image("Utils/Images/conti.png")
 
     with col3:
-        st.write("")
+        st.image("Utils/Images/confirmtkt.png")
+
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
     data = {"Company": ["BUDDI AI - a Claritrics Company",
                         'BUDDI AI - a Claritrics Company',
                         'Continental Automotive India Pvt Ltd',
@@ -118,24 +174,32 @@ with work_ex:
 
     st.write(df,f'<style>table {{background-color: white;border: 4px solid orange}}</style>', unsafe_allow_html=True)
 
-    # st.table(df)
-# st.sidebar.title("Know More")
-#
-# # Add some options to the sidebar
-# st.sidebar.button("Home")
-# st.sidebar.button("Work Experience")
-# st.sidebar.button("Projects")
-# st.sidebar.button("Skills")
-# st.sidebar.button("About")
-# st.sidebar.button("Contact")
 
-# st.subheader("General Information:")
-# col1, col2, col3 = st.columns(3)
-#
-# with col1:
-#     gender = st.selectbox(
-#     "Gender",
-#     options = ["Male", "Female"],
-#     help="Choose your Gender!"
-#     )
-#     I am Bhargavi, a graduate student at Northeastern University Boston pursuing Master’s in Information Systems. I have 2 years of work experience as a Research Engineer at BUDDI AI and 10 months internship experience as a Research Intern at Continental Automotive India Pvt Ltd.""")
+with pro:
+ col1, col2 = st.columns([1, 1])
+ with col1:
+     st.markdown("")
+     st.markdown("")
+     lottie_pro = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_glp2wakj.json")
+     st_lottie(
+         lottie_pro,
+         speed=1,
+         reverse=False,
+         loop=True,
+         height="450px",
+         width=None,
+         key=None,
+     )
+ with col2:
+     st.markdown("")
+     st.markdown("")
+     st.subheader("What I DO!")
+     st.markdown(
+         "<p style='font-size: 20px'>Explore and develop <span style='color: green;'>Machine learning</span> and <span style='color: green;'>Data Science</span> projects, I develop <span style='color: green;'>JAVA applications</span> too.</p>",
+         unsafe_allow_html=True)
+     st.markdown(
+         "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tool.</p>",
+         unsafe_allow_html=True)
+
+
+
