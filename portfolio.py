@@ -200,6 +200,7 @@ with pro:
      st.markdown(
          "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tool.</p>",
          unsafe_allow_html=True)
+     st.image("Utils/Images/toold.drawio.png")
 
 
 
