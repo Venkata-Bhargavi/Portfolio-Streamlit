@@ -1,1 +1,1 @@
-# Portfolio-Streamlit
+#>> source portfolio-env/bin/activate
