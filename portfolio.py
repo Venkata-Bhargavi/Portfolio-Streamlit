@@ -21,7 +21,8 @@ def load_lottieurl(url:str):
     if r.status_code !=200:
         return None
     return r.json()
-
+def open_link(url):
+    webbrowser.open_new_tab(url)
 # st.set_page_config(page_title="My Tabs", page_icon=":guardsman:", layout="wide")
 
 tab_styles = """
@@ -32,7 +33,7 @@ tab_styles = """
 # st.set_page_config(page_title="My Tabs", page_icon=":guardsman:", layout="wide") #css=tab_styles,unsafe_allow_html=True)
 
 # home, work_ex, pro, blog, skills, about, contact = st.tabs(["Home", "Work Experience", "Project", "Blog", "Skills", "About", "Contact"])
-home,work_ex, pro, Blog,skills,about,contact = st.tabs(["🏠 Home","👩‍💻 Work Experience", "⚙ ️Project", "✍️ Blog","🤹🏽 Skills","🧑 About","📞 Contact"]   )
+home,work_ex, pro, Blog,skills,about,contact = st.tabs(["🏠 **Home**","👩‍💻 **Work Experience**", "⚙ ️**Project**", "✍️ **Blog**","🤹🏽 **Skills**","🧑 **About**","📞 **Contact**"]   )
 # below code works when clicked home
 with home:
     col1, col2 = st.columns([1, 1])
@@ -49,12 +50,11 @@ with home:
         st.markdown(
             "<p style='font-size: 20px; text-align: center'>This portfolio is a collection of my work and achievements, showcasing my <span style='color: orange;'>skills</span> and abilities in my field of expertise. Here you will find a variety of <span style='color: orange;'>projects</span>, case studies, and other examples of my <span style='color: orange;'>work</span>. I hope you find it informative and I would be glad to discuss any of the works presented here. Thank you!</p>",unsafe_allow_html=True)
         # res_button = st.button("SEE MY RESUME")
-    def open_link(url):
-        webbrowser.open_new_tab(url)
+
     res_col,link_col = st.columns([1,8]) #columns for buttons
     with res_col:
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
-        res_button = st.button("SEE MY RESUME")
+        res_button = st.button("SEE MY RESUME ")
         if res_button:
             open_link(res_url)
     with link_col:
@@ -174,33 +174,74 @@ with work_ex:
 
     st.write(df,f'<style>table {{background-color: white;border: 4px solid orange}}</style>', unsafe_allow_html=True)
 
-
+# Project tab
 with pro:
- col1, col2 = st.columns([1, 1])
- with col1:
-     st.markdown("")
-     st.markdown("")
-     lottie_pro = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_glp2wakj.json")
-     st_lottie(
-         lottie_pro,
-         speed=1,
-         reverse=False,
-         loop=True,
-         height="450px",
-         width=None,
-         key=None,
-     )
- with col2:
-     st.markdown("")
-     st.markdown("")
-     st.subheader("What I DO!")
-     st.markdown(
-         "<p style='font-size: 20px'>Explore and develop <span style='color: green;'>Machine learning</span> and <span style='color: green;'>Data Science</span> projects, I develop <span style='color: green;'>JAVA applications</span> too.</p>",
-         unsafe_allow_html=True)
-     st.markdown(
-         "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tool.</p>",
-         unsafe_allow_html=True)
-     st.image("Utils/Images/toold.drawio.png")
+     col1, col2 = st.columns([1, 1])
+     with col1:
+         st.markdown("")
+         st.markdown("")
+         lottie_pro = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_glp2wakj.json")
+         st_lottie(
+             lottie_pro,
+             speed=1,
+             reverse=False,
+             loop=True,
+             height="450px",
+             width=None,
+             key=None,
+         )
+     with col2:
+         st.markdown("")
+         st.markdown("")
+         st.subheader("What I DO!")
+         st.markdown(
+             "<p style='font-size: 20px'>Explore and develop <span style='color: green;'>Machine learning</span> and <span style='color: green;'>Data Science</span> projects, I develop <span style='color: green;'>JAVA applications</span> too.</p>",
+             unsafe_allow_html=True)
+         st.markdown(
+             "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tools.</p>",
+             unsafe_allow_html=True)
+         st.image("Utils/Images/tools.drawio.png")
+
+     pro_col1,pro_col2,pro_col3 = st.columns([1,1,1])
+     with pro_col1:
+         st.subheader("**Heart Disease Prediction** 💚")
+         st.markdown("Category : **<span style='color: orange;'>Data Science</span>**",unsafe_allow_html=True)
+         st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
+         res_button = st.button("**Heart Disease Prediction APP**")
+         if res_button:
+             open_link(res_url)
+     with pro_col3:
+         st.subheader("**Vaccine Inventory Management** 💉")
+         st.markdown("Category : **<span style='color: orange;'>JAVA Application Development</span>**", unsafe_allow_html=True)
+         st.markdown("A vaccine management system which combinely manages distribution, inventory and monitoring of vaccine supply. This applications provides the traceability and security of the vaccines and its recipients.")
+         res_button = st.button("**Github**")
+         if res_button:
+             open_link(res_url)
 
 
+with Blog:
+    col1,col2 = st.columns([1,2])
+    with col1:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("Blogs")
+        st.markdown("")
+        st.markdown("[**Monitoring ML systems using MLOps - Medium**  🔗](https://medium.com/@bhargavi.sikhakolli31/monitoring-ml-systems-using-mlops-an-overview-e1d6eea64ae2)")
+        res_url = "https://medium.com/@bhargavi.sikhakolli31/monitoring-ml-systems-using-mlops-an-overview-e1d6eea64ae2"
+        res_button = st.button("""**🟡 Machine Learning operations  🟡 Model Monitoring**  🔗"""
+                               " Machine Learning Operations helps in streamlining the deployment process in production." 
+                                  " In addition it can be used for maintaining and monitoring the Machine Learning models.  Some of its features are focused and explained in this blog.")
+        if res_button:
+            open_link(res_url)
 
+    with col2:
+        lottie_pro = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_vjysv46c.json")
+        st_lottie(
+            lottie_pro,
+            speed=1,
+            reverse=False,
+            loop=True,
+            height="400px",
+            width=None,
+            key=None,
+        )
