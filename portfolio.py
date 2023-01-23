@@ -337,4 +337,10 @@ with about:
     col1_1,col1_2 = st.columns([1,2])
     with col1_1:
         st.header("Contact Information")
-        st.image("",width= 20)
+        # st.image("Utils/Images/linkedin.png",width= 20)
+    col2_1,col2_2 = st.columns([1,50])
+    with col2_1:
+        st.image("Utils/Images/linkedin.png", width=20)
+    with col2_2:
+        st.markdown("[LinkedIn](https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/)")
+
