@@ -33,7 +33,7 @@ tab_styles = """
 # st.set_page_config(page_title="My Tabs", page_icon=":guardsman:", layout="wide") #css=tab_styles,unsafe_allow_html=True)
 
 # home, work_ex, pro, blog, skills, about, contact = st.tabs(["Home", "Work Experience", "Project", "Blog", "Skills", "About", "Contact"])
-home,work_ex, pro, Blog,skills,about,contact = st.tabs(["🏠 **Home**","👩‍💻 **Work Experience**", "⚙ ️**Project**", "✍️ **Blog**","🤹🏽 **Skills**","🧑 **About**","📞 **Contact**"]   )
+home,work_ex, pro, Blog,about = st.tabs(["🏠 **Home**","👩‍💻 **Work Experience**", "⚙ ️**Project**", "✍️ **Blog**","🧑 **About**"]   )
 # below code works when clicked home
 with home:
     col1, col2 = st.columns([1, 1])
@@ -59,7 +59,7 @@ with home:
             open_link(res_url)
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
-        linkedin_button = st.button("LINKEDIN")
+        linkedin_button = st.button("LINKEDIN  📋")
         if linkedin_button:
             open_link(linkedin_url)
 
@@ -201,22 +201,94 @@ with pro:
              "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tools.</p>",
              unsafe_allow_html=True)
          st.image("Utils/Images/tools.drawio.png")
-
-     pro_col1,pro_col2,pro_col3 = st.columns([1,1,1])
-     with pro_col1:
+     st.markdown("**<p style='font-size: 40px'><span style='color: purple;'>PROJECTS</span></p>**",unsafe_allow_html=True)
+     st.markdown("")
+     st.markdown("")
+     pro_col1_1,pro_col1_2 = st.columns([1,1])
+     with pro_col1_1:
          st.subheader("**Heart Disease Prediction** 💚")
-         st.markdown("Category : **<span style='color: orange;'>Data Science</span>**",unsafe_allow_html=True)
+         st.markdown("Category : **<span style='color: orange;'>Machine Learning</span>**",unsafe_allow_html=True)
+         st.image("Utils/Images/Screen Shot 2023-01-10 at 4.26.27 PM.png")
          st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
          res_button = st.button("**Heart Disease Prediction APP**")
          if res_button:
              open_link(res_url)
-     with pro_col3:
+     with pro_col1_2:
          st.subheader("**Vaccine Inventory Management** 💉")
          st.markdown("Category : **<span style='color: orange;'>JAVA Application Development</span>**", unsafe_allow_html=True)
+         st.image("Utils/Images/Screen Shot 2023-01-10 at 4.24.46 PM.png")
          st.markdown("A vaccine management system which combinely manages distribution, inventory and monitoring of vaccine supply. This applications provides the traceability and security of the vaccines and its recipients.")
-         res_button = st.button("**Github**")
+         st.markdown("")
+         res_button = st.button("**Github 🚑**")
          if res_button:
              open_link(res_url)
+     line_col, dummy= st.columns([0.9,0.001])
+     with line_col:
+        st.write("----------------------------------------------------------------")
+     pro_col2_1, pro_col2_2, pro_col2_3 = st.columns([1, 1, 1])
+     with pro_col2_1:
+         st.markdown("")
+         st.markdown("")
+         st.subheader("**Machine Predictive Maintenance** 🏭")
+         st.markdown("")
+         st.markdown("")
+         st.markdown("Category : **<span style='color: orange;'>Machine learning</span>**", unsafe_allow_html=True)
+         st.markdown("A Machine Learning model with 98% accuracy in identifying potential machine failures in an industry")
+         st.markdown("")
+         st.markdown("")
+         st.markdown("")
+         st.markdown("")
+         res_button = st.button("**Colab 📔**")
+         mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
+         if res_button:
+             open_link(mpm_colab_rul)
+     with pro_col2_2:
+         st.markdown("")
+         st.markdown("")
+         st.subheader("**Statistical Analysis Command Line Tool** 📈")
+         st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**", unsafe_allow_html=True)
+         st.markdown("An Interactive command line tool implemented in Scala using SMILE(Statistical Machine Intelligence and Learning Engine) for conducting Statistical analysis on numerical data.")
+         scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
+         st.markdown("")
+         st.markdown("")
+         git_button = st.button("**Github 📊**")
+         if git_button:
+             open_link(scala_url)
+
+     with pro_col2_3:
+         st.markdown("")
+         st.markdown("")
+         st.subheader("**UI to display processed images** 🔍")
+         st.markdown("")
+         st.markdown("")
+         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**", unsafe_allow_html=True)
+         st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
+         ui_url = "https://github.com/bhargavi31/UI_designer"
+         st.markdown("")
+         git_button = st.button("**Github**")
+         if git_button:
+             open_link(ui_url)
+     pro_col3_1,pro_col3_2,pro_col3_3 = st.columns([1,1,1])
+     with pro_col3_1:
+         st.markdown("")
+         st.markdown("")
+         st.subheader("**Medical Resource Management 🏥**")
+         st.markdown("")
+         st.markdown("")
+         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**",
+                     unsafe_allow_html=True)
+         st.markdown(
+             "An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
+         ui_url = "https://github.com/bhargavi31/UI_designer"
+         st.markdown("")
+         git_button = st.button("**Github ⚕️**")
+         if git_button:
+             open_link(ui_url)
+
+
+
+
+
 
 
 with Blog:
@@ -245,3 +317,24 @@ with Blog:
             width=None,
             key=None,
         )
+    col2_1, col2_2 = st.columns([1, 2])
+    with col2_1:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("Knowledge Share")
+        st.markdown("")
+        st.markdown(
+            "[**Feature scaling in data preprocessing**  🔗](https://drive.google.com/file/d/1e49rttp_EYnMnbaXSkc4TBVGPTYwpafo/view?usp=sharing)")
+        res_url = "https://drive.google.com/file/d/1e49rttp_EYnMnbaXSkc4TBVGPTYwpafo/view?usp=sharing"
+        res_button = st.button("""**🟡 Feature scaling techniques  🟡 Data Science**  🔗"""
+                               " Here is a presentation by me explaining feature scaling techniques to perform during Exploratory Data Analysis.")
+        if res_button:
+            open_link(res_url)
+
+with about:
+    st.markdown("")
+    st.markdown("")
+    col1_1,col1_2 = st.columns([1,2])
+    with col1_1:
+        st.header("Contact Information")
+        st.image("",width= 20)
