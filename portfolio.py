@@ -4,6 +4,8 @@ import pandas as pd
 import requests
 from PIL import Image
 from streamlit_lottie import st_lottie
+import streamlit.components.v1 as components
+
 import webbrowser
 
 # The code below is for the layout of the page
@@ -53,10 +55,15 @@ with home:
 
     res_col,link_col = st.columns([1,8]) #columns for buttons
     with res_col:
+        def open_link(url):
+            webbrowser.open_new_tab(url)
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
         res_button = st.button("SEE MY RESUME ")
         if res_button:
-            open_link(res_url)
+            # embed streamlit docs in a streamlit app
+            webbrowser.open_new_tab("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
+            # open_link(res_url)
+
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
         linkedin_button = st.button("LINKEDIN  📋")
