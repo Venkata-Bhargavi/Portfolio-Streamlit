@@ -5,7 +5,7 @@ import requests
 from PIL import Image
 from streamlit_lottie import st_lottie
 import streamlit.components.v1 as components
-
+import subprocess
 import webbrowser
 
 # The code below is for the layout of the page
@@ -56,16 +56,17 @@ with home:
     res_col,link_col = st.columns([1,8]) #columns for buttons
     with res_col:
         def open_link(url):
-            webbrowser.open_new_tab(url)
+            # webbrowser.open_new_tab(url)
+            subprocess.run(["open", url])
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
-
-        st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
-        """,unsafe_allow_html=True)
+        #
+        # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
+        # """,unsafe_allow_html=True)
         res_button = st.button("SEE MY RESUME ")
         if res_button:
             # embed streamlit docs in a streamlit app
-            webbrowser.open_new_tab("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
-            # open_link(res_url)
+            # webbrowser.open("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
+            open_link(res_url)
 
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
