@@ -62,7 +62,7 @@ with home:
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
         # """,unsafe_allow_html=True)
-        st.markdown(f"[SEE MY RESUME 📋]({res_url})", unsafe_allow_html=True)
+        st.markdown(f"[:red[SEE MY RESUME] 📋]({res_url})", unsafe_allow_html=True)
         # res_button = st.button("SEE MY RESUME ")
         # if res_button:
         #     # embed streamlit docs in a streamlit app
@@ -71,9 +71,10 @@ with home:
 
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
-        linkedin_button = st.button("LINKEDIN  📋")
-        if linkedin_button:
-            open_link(linkedin_url)
+        # linkedin_button = st.button("LINKEDIN  📋")
+        # if linkedin_button:
+        #     open_link(linkedin_url)
+        st.markdown(f"[:red[LinkedIn] 📋]({linkedin_url})", unsafe_allow_html=True)
 
     # col 2 in home
     with col2:
