@@ -62,11 +62,12 @@ with home:
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
         # """,unsafe_allow_html=True)
-        res_button = st.button("SEE MY RESUME ")
-        if res_button:
-            # embed streamlit docs in a streamlit app
-            # webbrowser.open("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
-            open_link(res_url)
+        st.markdown(f"[SEE MY RESUME 📋]({res_url})", unsafe_allow_html=True)
+        # res_button = st.button("SEE MY RESUME ")
+        # if res_button:
+        #     # embed streamlit docs in a streamlit app
+        #     # webbrowser.open("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
+        #     open_link(res_url)
 
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
