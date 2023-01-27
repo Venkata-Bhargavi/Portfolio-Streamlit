@@ -55,13 +55,13 @@ with home:
             "<p style='font-size: 20px; text-align: center'>This portfolio is a collection of my work and achievements, showcasing my <span style='color: orange;'>skills</span> and abilities in my field of expertise. Here you will find a variety of <span style='color: orange;'>projects</span>, case studies, and other examples of my <span style='color: orange;'>work</span>. I hope you find it informative and I would be glad to discuss any of the works presented here. Thank you!</p>",unsafe_allow_html=True)
         # res_button = st.button("SEE MY RESUME")
 
-    res_col,link_col = st.columns([1,8]) #columns for buttons
+    res_col,dummy_col = st.columns([1.2,8]) #columns for buttons
     with res_col:
         def open_link(url):
             # webbrowser.open_new_tab(url)
             subprocess.run(["open", url])
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
-        st_button('youtube','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','SEE MY RESUME 📋',6)
+        st_button('newsletter','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','RESUME',17)
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
         # """,unsafe_allow_html=True)
@@ -71,13 +71,14 @@ with home:
         #     # embed streamlit docs in a streamlit app
         #     # webbrowser.open("https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing")
         #     open_link(res_url)
-
+    link_col,dummy_col2 = st.columns([1.2,8])
     with link_col:
         linkedin_url = "https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/"
         # linkedin_button = st.button("LINKEDIN  📋")
         # if linkedin_button:
         #     open_link(linkedin_url)
-        st.markdown(f"[LinkedIn 📋]({linkedin_url})", unsafe_allow_html=True)
+        # st.markdown(f"[LinkedIn 📋]({linkedin_url})", unsafe_allow_html=True)
+        st_button('linkedin', f'{linkedin_url}','LinkedIn', 17)
 
     # col 2 in home
     with col2:
@@ -227,9 +228,12 @@ with pro:
          st.markdown("Category : **<span style='color: orange;'>Machine Learning</span>**",unsafe_allow_html=True)
          st.image("Utils/Images/Screen Shot 2023-01-10 at 4.26.27 PM.png")
          st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
-         res_button = st.button("**Heart Disease Prediction APP**")
-         if res_button:
-             open_link(heart_url)
+         # res_button = st.button("**Heart Disease Prediction APP**")
+         # if res_button:
+         #     open_link(heart_url)
+         st_button('', f'{heart_url}',
+                   'Heart Disease Prediction App', 17)
+
      with pro_col1_2:
          vim_url = "https://github.com/Venkata-Bhargavi/AED_Final_Project"
          st.subheader("**Vaccine Inventory Management** 💉")
@@ -237,9 +241,11 @@ with pro:
          st.image("Utils/Images/Screen Shot 2023-01-10 at 4.24.46 PM.png")
          st.markdown("A vaccine management system which combinely manages distribution, inventory and monitoring of vaccine supply. This applications provides the traceability and security of the vaccines and its recipients.")
          st.markdown("")
-         res_button = st.button("**Github 🚑**")
-         if res_button:
-             open_link(vim_url)
+         # res_button = st.button("**Github 🚑**")
+         # if res_button:
+         #     open_link(vim_url)
+         st_button('', f'{vim_url}',
+                   'Github 🚑', 17)
      line_col, dummy= st.columns([0.9,0.001])
      with line_col:
         st.write("----------------------------------------------------------------")
@@ -256,10 +262,12 @@ with pro:
          st.markdown("")
          st.markdown("")
          st.markdown("")
-         res_button = st.button("**Colab 📔**")
+         # res_button = st.button("**Colab 📔**")
          mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
-         if res_button:
-             open_link(mpm_colab_rul)
+         # if res_button:
+         #     open_link(mpm_colab_rul)
+         st_button('', f'{mpm_colab_rul}',
+                   'Colab 📔', 17)
      with pro_col2_2:
          st.markdown("")
          st.markdown("")
@@ -269,9 +277,12 @@ with pro:
          scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
          st.markdown("")
          st.markdown("")
-         git_button = st.button("**Github 📊**")
-         if git_button:
-             open_link(scala_url)
+         
+         # git_button = st.button("**Github 📊**")
+         # if git_button:
+         #     open_link(scala_url)
+         st_button('', f'{scala_url}',
+                   'Github 📊', 17)
 
      with pro_col2_3:
          st.markdown("")
@@ -283,9 +294,11 @@ with pro:
          st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
          ui_url = "https://github.com/bhargavi31/UI_designer"
          st.markdown("")
-         git_button = st.button("**Github**")
-         if git_button:
-             open_link(ui_url)
+         # git_button = st.button("**Github**")
+         # if git_button:
+         #     open_link(ui_url)
+         st_button('', f'{ui_url}',
+                   'Github', 17)
      pro_col3_1,pro_col3_2,pro_col3_3 = st.columns([1,1,1])
      with pro_col3_1:
          st.markdown("")
@@ -299,9 +312,11 @@ with pro:
              "An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
          ui_url = "https://github.com/bhargavi31/UI_designer"
          st.markdown("")
-         git_button = st.button("**Github ⚕️**")
-         if git_button:
-             open_link(ui_url)
+         # git_button = st.button("**Github ⚕️**")
+         # if git_button:
+         #     open_link(ui_url)
+         st_button('', f'{ui_url}',
+                   'Github ⚕', 17)
 
 
 
