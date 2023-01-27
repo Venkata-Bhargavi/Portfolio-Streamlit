@@ -2,6 +2,7 @@ import json
 import streamlit as st
 import pandas as pd
 import requests
+from st_functions import st_button
 from PIL import Image
 from streamlit_lottie import st_lottie
 import streamlit.components.v1 as components
@@ -59,10 +60,11 @@ with home:
             # webbrowser.open_new_tab(url)
             subprocess.run(["open", url])
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
+        st_button('SEE MY RESUME 📋','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','My_Resume',12)
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
         # """,unsafe_allow_html=True)
-        st.markdown(f"[SEE MY RESUME 📋]({res_url})", unsafe_allow_html=True)
+        # st.markdown(f"[SEE MY RESUME 📋]({res_url})", unsafe_allow_html=True)
         # res_button = st.button("SEE MY RESUME ")
         # if res_button:
         #     # embed streamlit docs in a streamlit app
@@ -219,14 +221,16 @@ with pro:
      st.markdown("")
      pro_col1_1,pro_col1_2 = st.columns([1,1])
      with pro_col1_1:
+         heart_url = "https://heartdiseasejkkn.streamlit.app/"
          st.subheader("**Heart Disease Prediction** 💚")
          st.markdown("Category : **<span style='color: orange;'>Machine Learning</span>**",unsafe_allow_html=True)
          st.image("Utils/Images/Screen Shot 2023-01-10 at 4.26.27 PM.png")
          st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
          res_button = st.button("**Heart Disease Prediction APP**")
          if res_button:
-             open_link(res_url)
+             open_link(heart_url)
      with pro_col1_2:
+         vim_url = "https://github.com/Venkata-Bhargavi/AED_Final_Project"
          st.subheader("**Vaccine Inventory Management** 💉")
          st.markdown("Category : **<span style='color: orange;'>JAVA Application Development</span>**", unsafe_allow_html=True)
          st.image("Utils/Images/Screen Shot 2023-01-10 at 4.24.46 PM.png")
@@ -234,7 +238,7 @@ with pro:
          st.markdown("")
          res_button = st.button("**Github 🚑**")
          if res_button:
-             open_link(res_url)
+             open_link(vim_url)
      line_col, dummy= st.columns([0.9,0.001])
      with line_col:
         st.write("----------------------------------------------------------------")
