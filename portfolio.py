@@ -2,13 +2,12 @@ import json
 import streamlit as st
 import pandas as pd
 import requests
-from st_functions import st_button
+from st_functions import st_button,load_css
 from PIL import Image
 from streamlit_lottie import st_lottie
 import streamlit.components.v1 as components
 import subprocess
 import webbrowser
-
 # The code below is for the layout of the page
 st.set_page_config(  # Alternate names: setup_page, page, layout
     layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
@@ -16,6 +15,8 @@ st.set_page_config(  # Alternate names: setup_page, page, layout
     page_title='Venkata_Bhargavi_Sikhakolli',  # String or None. Strings get appended with "• Streamlit".
     page_icon= None,  # String, anything supported by st.image, or None.
 )
+load_css()
+
 def load_lottiefile(filepath:str):
     with open(filepath,"r") as f:
         return json.load(f)
@@ -60,7 +61,7 @@ with home:
             # webbrowser.open_new_tab(url)
             subprocess.run(["open", url])
         res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
-        st_button('SEE MY RESUME 📋','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','My_Resume',12)
+        st_button('youtube','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','SEE MY RESUME 📋',6)
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
         # """,unsafe_allow_html=True)
