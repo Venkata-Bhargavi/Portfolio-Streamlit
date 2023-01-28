@@ -261,7 +261,6 @@ with pro:
          st.markdown("")
          st.markdown("")
          st.markdown("")
-         st.markdown("")
          # res_button = st.button("**Colab 📔**")
          mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
          # if res_button:
