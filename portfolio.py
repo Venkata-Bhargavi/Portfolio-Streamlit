@@ -368,15 +368,16 @@ with about:
     st.markdown("")
     st.header("Hi Again!")
     st.markdown(
-        f"I am Information Systems Graduate student from Northeastern University Boston. Prior to this I worked as a Research Engineer at BUDDI AI (More details about my role and responsibilities can be found in my [Resume]({res_url})). I have pursued M.Tech Integrated Software Engineering (Undergrad + Master's, a five year integrated course) from Vellore Institute of Technology, Vellore India.")
-
+        f"As a graduate student in Information Systems at Northeastern University in Boston, I bring a unique blend of academic and professional experience to my field. Prior to this, I worked as a Research Engineer at BUDDI AI. I also hold an M.Tech in Integrated Software Engineering(a five year integrated course) from Vellore Institute of Technology in India. My philosophy is centered on the belief that hard work and consistency are the keys to success, and I constantly strive to gain wisdom over just knowledge.")
+    st.markdown("")
+    st.markdown("**Note:** I am known among my colleagues as a fun and enjoyable person to work with.")
     col1_1,col1_2 = st.columns([1,2])
     with col1_1:
       st.header("Contact Information")
         # st.image("Utils/Images/linkedin.png",width= 20)
 
 
-    st.markdown("<p style='font-size: 20px'><span style='color: grey;'>Would you like to disscuss a project or a tech topic, or just want to say Hi? drop an email to</span> bhargavi.sikhakolli31@gmail.com</p>", unsafe_allow_html=True)
+    st.markdown("<p style='font-size: 20px'><span style='color: grey;'>Would you like to disscuss a project or a tech topic, or just want to say Hi? drop an email to</span> bhargavi.sikhakolli31@gmail.com <span style='color: grey;'>or</span> sikhakolli.v@northeastern.edu</p>", unsafe_allow_html=True)
     st.markdown("<p style='font-size: 20px'><span style='color: grey;'>Open to Opportunities : YES</span></p>",
                 unsafe_allow_html=True)
 
@@ -385,3 +386,9 @@ with about:
         st.image("Utils/Images/linkedin.png", width=20)
     with col2_2:
         st.markdown("[LinkedIn](https://www.linkedin.com/in/bhargavi-sikhakolli-9ab281117/)")
+    col3_1,col3_2 = st.columns([1,50])
+    with col3_1:
+        st.image("Utils/Images/medium_logo.png", width=20)
+    with col3_2:
+        st.markdown("[Medium](https://medium.com/@bhargavi.sikhakolli31)")
+
