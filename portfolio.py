@@ -367,10 +367,14 @@ with about:
     st.markdown("")
     st.markdown("")
     st.header("Hi Again!")
-    st.markdown(
-        f"As a graduate student in Information Systems at Northeastern University in Boston, I bring a unique blend of academic and professional experience to my field. Prior to this, I worked as a Research Engineer at BUDDI AI. I also hold an M.Tech in Integrated Software Engineering(a five year integrated course) from Vellore Institute of Technology in India. My philosophy is centered on the belief that hard work and consistency are the keys to success, and I constantly strive to gain wisdom over just knowledge.")
-    st.markdown("")
-    st.markdown("**Note:** I am known among my colleagues as a fun and enjoyable person to work with.")
+    col1_1,col1_2 = st.columns([6,2])
+    with col1_1:
+        st.markdown(
+            f"As a graduate student in Information Systems at Northeastern University in Boston, I bring a unique blend of academic and professional experience to my field. Prior to this, I worked as a Research Engineer at BUDDI AI. I also hold an M.Tech in Integrated Software Engineering(a five year integrated course) from Vellore Institute of Technology in India. My philosophy is centered on the belief that hard work and consistency are the keys to success, and I constantly strive to gain wisdom over just knowledge.")
+        st.markdown("")
+        st.markdown("**Note:** I am known among my colleagues as a fun and enjoyable person to work with.")
+    with col1_2:
+        st.image("Utils/Images/SELF.jpeg", width=320)
     col1_1,col1_2 = st.columns([1,2])
     with col1_1:
       st.header("Contact Information")
