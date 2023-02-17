@@ -40,9 +40,9 @@ tab_styles = """
 home,work_ex, pro, Blog,about = st.tabs(["🏠 **Home**","👩‍💻 **Work Experience**", "⚙ ️**Project**", "✍️ **Blog**","🧑 **About**"]   )
 # below code works when clicked home
 with home:
-    col1, col2 = st.columns([1, 1])
+    buddi_col1, buddi_col2 = st.columns([1, 1])
     # col1  in home
-    with col1:
+    with buddi_col1:
         st.markdown("")
         st.markdown("")
         st.markdown("")
@@ -81,7 +81,7 @@ with home:
         st_button('linkedin', f'{linkedin_url}','LinkedIn', 17)
 
     # col 2 in home
-    with col2:
+    with buddi_col2:
         st.markdown("")
         st.markdown("")
         lottie_hello = load_lottieurl("https://assets2.lottiefiles.com/private_files/lf30_rdkbjlef.json")
@@ -122,200 +122,195 @@ with work_ex:
     st.markdown("")
 
 
-    col1, col2, col3 = st.columns([1, 1, 1])
+    buddi_col1, buddi_col2 = st.columns([1, 1])
 
-    with col1:
+    with buddi_col1:
         st.image("Utils/Images/buddi.png")
-
-    with col2:
+    with buddi_col2:
+        st.markdown("**Company** :  BUDDI AI - a Claritrics Company")
+        st.markdown("**Job Title** :  Research Engineer")
+        st.markdown("**Duration** : 08-2020 to 06-2022 **(2 years)**")
+        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view?usp=share_link)")
+        with st.expander("**Read More**"):
+            st.write("- Researched on extracting named entities i.e NER from Electronic Health Records leveraging BILSTM and CRF models resulting in a 30% reduction in medical coding costs")
+            st.write("- Devised a more advanced ensemble model for Named Entity Recognition in conversational medical text, using BioBert as a reference model and incorporating contextual information, resulted in a 40% increase in precision compared to previously trained generic models")
+            st.write("- Guided a team of 3 in a research project comparing BERT-based algorithms and provided knowledge transfer sessions")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    buddi2_col1, buddi2_col2 = st.columns([1, 1])
+    with buddi2_col1:
+        st.image("Utils/Images/buddi.png")
+    with buddi2_col2:
+        st.markdown("**Company** :  BUDDI AI - a Claritrics Company")
+        st.markdown("**Job Title** :  Intern")
+        st.markdown("**Duration** : 06-2020 to 08-2020 **(2 months)**")
+        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1wkhYExQQ4j4CFlyMwBvJyaoEHfP5scUX/view?usp=sharing)")
+        with st.expander("**Read More**"):
+            st.write("- Developed an interactive command-line tool for conducting statistical analysis on numerical data using Scala and SMILE (Statistical Machine Intelligence and Learning Engine) package")
+            st.write("- Tool allows users to select specific features for analysis and perform a variety of operations, such as mean, median and standard deviation")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    conti_col1, conti_col2 = st.columns([1, 1])
+    with conti_col1:
         st.image("Utils/Images/conti.png")
-
-    with col3:
+    with conti_col2:
+        st.markdown("**Company** :  Continental Automotive India Pvt Ltd")
+        st.markdown("**Job Title** :  Research Intern in Artificial Intelligence and Robotics Labs")
+        st.markdown("**Duration** : 08-2019 to 04-2020 **(10 months)**")
+        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1TuW2FPYaa5Tv3NX4_zueALg2xAQYLy-3/view?usp=sharing)")
+        with st.expander("**Read More**"):
+            st.write("- Synthetic Voice Emotion Generation – A data generator to generate voice of multiple emotions other than input voice, it is intended to completely reduce manual efforts in collecting data from individuals")
+            st.write("- The generator is trained on a CycleGAN model using voice data of different emotions and generates synthetic data that can be consumed by computer vision researchers in model training. The model’s generated voices are ~75% in comparison to human voices")
+            st.write("- Created a UI in python to execute image processing operations and displays processed histograms and translated images in widgets")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    confirm_col1,confirm_col2 = st.columns([1,1])
+    with confirm_col1:
         st.image("Utils/Images/confirmtkt.png")
+    with confirm_col2:
+        st.markdown("**Company** :  ConfirmTKT")
+        st.markdown("**Job Title** :  Android Developer Intern")
+        st.markdown("**Duration** : 05-2019 to 06-2019 **(1 month)**")
+        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1E1HDQwe7_M4Y-N0OmDRLxrhq_VmBb4jh/view?usp=sharing)")
+        with st.expander("Read More"):
+            st.write("- Created a user-friendly interface for a recharge module by utilizing API calls and seamlessly integrating with a payment portal")
+            st.write("- Leveraged XML in Android Studio to design and develop the interface for the recharge module")
+            st.write("- Utilized Java programming language to execute API calls, integrate with the payment portal, and implement shared preferences")
 
-        st.markdown("")
-        st.markdown("")
-        st.markdown("")
-        st.markdown("")
-        st.markdown("")
-    data = {"Company": ["BUDDI AI - a Claritrics Company",
-                        'BUDDI AI - a Claritrics Company',
-                        'Continental Automotive India Pvt Ltd',
-                        "ConfirmTKT", ],
-            "Job Title": ['Research Engineer', 'Intern',
-                          'Research Intern in AIR Labs',
-                          'Android Developer Intern'],
-            "Description": ["""– Researched on extracting named entities i.e NER from Electronic Health Records leveraging BILSTM and CRF models resulting in a 30% reduction in medical coding costs.
-    – Devised a more advanced ensemble model for Named Entity Recognition in conversational medical text, using BioBert as a reference model and incorporating contextual information, resulted in a 40% increase in precision compared to previously trained generic models
-    – Guided a team of 3 in a research project comparing BERT-based algorithms and provided knowledge transfer sessions""",
-                            """– Developed an interactive command-line tool for conducting statistical analysis on numerical data using Scala and SMILE (Statistical Machine Intelligence and Learning Engine) package. 
-– Tool allows users to select specific features for analysis and perform a variety of operations, such as mean, median and standard deviation""", """– Synthetic Voice Emotion Generation – A data generator to generate voice of multiple emotions other than input voice, it is intended to completely reduce manual efforts in collecting data from individuals
-– The generator is trained on a CycleGAN model using voice data of different emotions and generates synthetic data  that can be consumed by computer vision researchers in model training. The model’s generated voices are ~75% in comparison to human voices
-– Created a UI in python to execute image processing operations and displays processed histograms and translated images in widgets""",
-                            """– Created a user-friendly interface for a recharge module by utilizing API calls and seamlessly integrating with a payment portal.
-– Leveraged XML in Android Studio to design and develop the interface for the recharge module.
-– Utilized Java programming language to execute API calls, integrate with the payment portal, and implement shared preferences"""],
-
-            }
-
-    df = pd.DataFrame(data)
-
-    certi =  [
-                     "[Experience Certificate](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view",
-                     "[Internship Certificate](https://drive.google.com/file/d/1wkhYExQQ4j4CFlyMwBvJyaoEHfP5scUX/view?usp=sharing",
-                     "[Internship Certificate](https://drive.google.com/file/d/1TuW2FPYaa5Tv3NX4_zueALg2xAQYLy-3/view?usp=sharing",
-                     "[Internship Certificate](https://drive.google.com/file/d/1E1HDQwe7_M4Y-N0OmDRLxrhq_VmBb4jh/view?usp=sharing"
-                     ]
-    df["Certificates"] = certi
-    # st.write(df,format='markdown', unsafe_allow_html=True)
-    # st.write(df.style.format({'Certificates': '<a href="{}">{}</a>'}))
-
-    # df.at[1, 'Certificates'] = f"[Experience Letter](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view)"
-
-    # for i in range(len(df)):
-    #     df.loc[i,"Certificates"] = certi[i]
-    # # st.write(df.to_html(escape=False, index=False), unsafe_allow_html=True)
-
-
-    def make_clickable(link):
-        # target _blank to open new window
-        # extract clickable text to display for your link
-        text = link.split(']')[0].replace("[","")
-        return f'<a target="_blank" href="{link}">{text}</a>'
-
-
-    # link is the column with hyperlinks
-    df['Certificates'] = df['Certificates'].apply(make_clickable)
-
-    df = df.to_html(escape=False,index=False)
-
-    st.write(df,f'<style>table {{background-color: white;border: 4px solid orange}}</style>', unsafe_allow_html=True)
 
 # Project tab
 with pro:
-     col1, col2 = st.columns([1, 1])
-     with col1:
-         st.markdown("")
-         st.markdown("")
-         lottie_pro = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_glp2wakj.json")
-         st_lottie(
-             lottie_pro,
-             speed=1,
-             reverse=False,
-             loop=True,
-             height="450px",
-             width=None,
-             key=None,
+    buddi_col1, buddi_col2 = st.columns([1, 1])
+    with buddi_col1:
+        st.markdown("")
+        st.markdown("")
+        lottie_pro = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_glp2wakj.json")
+        st_lottie(
+         lottie_pro,
+         speed=1,
+         reverse=False,
+         loop=True,
+         height="450px",
+         width=None,
+         key=None,
          )
-     with col2:
-         st.markdown("")
-         st.markdown("")
-         st.subheader("What I DO!")
-         st.markdown(
-             "<p style='font-size: 20px'>Explore and develop <span style='color: green;'>Machine learning</span> and <span style='color: green;'>Data Science</span> projects, I develop <span style='color: green;'>JAVA applications</span> too.</p>",
-             unsafe_allow_html=True)
-         st.markdown(
-             "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tools.</p>",
-             unsafe_allow_html=True)
-         st.image("Utils/Images/tools.drawio.png")
+    with buddi_col2:
+     st.markdown("")
+     st.markdown("")
+     st.subheader("What I DO!")
+     st.markdown(
+         "<p style='font-size: 20px'>Explore and develop <span style='color: green;'>Machine learning</span> and <span style='color: green;'>Data Science</span> projects, I develop <span style='color: green;'>JAVA applications</span> too.</p>",
+         unsafe_allow_html=True)
+     st.markdown(
+         "<p style='font-size: 20px'>Aiming to explore every Data Engineering and Data Pipeline Tools.</p>",
+         unsafe_allow_html=True)
+     st.image("Utils/Images/tools.drawio.png")
      st.markdown("**<p style='font-size: 40px'><span style='color: purple;'>PROJECTS</span></p>**",unsafe_allow_html=True)
      st.markdown("")
      st.markdown("")
-     pro_col1_1,pro_col1_2 = st.columns([1,1])
-     with pro_col1_1:
-         heart_url = "https://heartdiseasejkkn.streamlit.app/"
-         st.subheader("**Heart Disease Prediction** 💚")
-         st.markdown("Category : **<span style='color: orange;'>Machine Learning</span>**",unsafe_allow_html=True)
-         st.image("Utils/Images/Screen Shot 2023-01-10 at 4.26.27 PM.png")
-         st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
-         # res_button = st.button("**Heart Disease Prediction APP**")
-         # if res_button:
-         #     open_link(heart_url)
-         st_button('', f'{heart_url}',
-                   'Heart Disease Prediction App', 17)
-
-     with pro_col1_2:
-         vim_url = "https://github.com/Venkata-Bhargavi/AED_Final_Project"
-         st.subheader("**Vaccine Inventory Management** 💉")
-         st.markdown("Category : **<span style='color: orange;'>JAVA Application Development</span>**", unsafe_allow_html=True)
-         st.image("Utils/Images/Screen Shot 2023-01-10 at 4.24.46 PM.png")
-         st.markdown("A vaccine management system which combinely manages distribution, inventory and monitoring of vaccine supply. This applications provides the traceability and security of the vaccines and its recipients.")
-         st.markdown("")
-         # res_button = st.button("**Github 🚑**")
-         # if res_button:
-         #     open_link(vim_url)
-         st_button('', f'{vim_url}',
-                   'Github 🚑', 17)
-     line_col, dummy= st.columns([0.9,0.001])
-     with line_col:
+    pro_col1_1,pro_col1_2 = st.columns([1,1])
+    with pro_col1_1:
+        heart_url = "https://heartdiseasejkkn.streamlit.app/"
+        st.subheader("**Heart Disease Prediction** 💚")
+        st.markdown("Category : **<span style='color: orange;'>Machine Learning</span>**",unsafe_allow_html=True)
+        st.image("Utils/Images/Screen Shot 2023-01-10 at 4.26.27 PM.png")
+        st.markdown("Heart diseases are complex and challenging to predict using machine intelligence and predictions are expected to be highly accurate. Knowing their heart condition in just few clicks can help in alerting patients about their health. Here is an app built using data science techniques and machine learning algorithm that can help you know about your heart health.")
+        # res_button = st.button("**Heart Disease Prediction APP**")
+        # if res_button:
+        #     open_link(heart_url)
+        st_button('', f'{heart_url}',
+               'Heart Disease Prediction App', 17)
+    with pro_col1_2:
+        vim_url = "https://github.com/Venkata-Bhargavi/AED_Final_Project"
+        st.subheader("**Vaccine Inventory Management** 💉")
+        st.markdown("Category : **<span style='color: orange;'>JAVA Application Development</span>**", unsafe_allow_html=True)
+        st.image("Utils/Images/Screen Shot 2023-01-10 at 4.24.46 PM.png")
+        st.markdown("A vaccine management system which combinely manages distribution, inventory and monitoring of vaccine supply. This applications provides the traceability and security of the vaccines and its recipients.")
+        st.markdown("")
+        # res_button = st.button("**Github 🚑**")
+        # if res_button:
+        #     open_link(vim_url)
+        st_button('', f'{vim_url}',
+               'Github 🚑', 17)
+    line_col, dummy= st.columns([0.9,0.001])
+    with line_col:
         st.write("----------------------------------------------------------------")
-     pro_col2_1, pro_col2_2, pro_col2_3 = st.columns([1, 1, 1])
-     with pro_col2_1:
-         st.markdown("")
-         st.markdown("")
-         st.subheader("**Machine Predictive Maintenance** 🏭")
-         st.markdown("")
-         st.markdown("")
-         st.markdown("Category : **<span style='color: orange;'>Machine learning</span>**", unsafe_allow_html=True)
-         st.markdown("A Machine Learning model with 98% accuracy in identifying potential machine failures in an industry")
-         st.markdown("")
-         st.markdown("")
-         st.markdown("")
-         # res_button = st.button("**Colab 📔**")
-         mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
-         # if res_button:
-         #     open_link(mpm_colab_rul)
-         st_button('', f'{mpm_colab_rul}',
-                   'Colab 📔', 17)
-     with pro_col2_2:
-         st.markdown("")
-         st.markdown("")
-         st.subheader("**Statistical Analysis Command Line Tool** 📈")
-         st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**", unsafe_allow_html=True)
-         st.markdown("An Interactive command line tool implemented in Scala using SMILE(Statistical Machine Intelligence and Learning Engine) for conducting Statistical analysis on numerical data.")
-         scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
-         st.markdown("")
-         st.markdown("")
+    pro_col2_1, pro_col2_2, pro_col2_3 = st.columns([1, 1, 1])
+    with pro_col2_1:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("**Machine Predictive Maintenance** 🏭")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("Category : **<span style='color: orange;'>Machine learning</span>**", unsafe_allow_html=True)
+        st.markdown("A Machine Learning model with 98% accuracy in identifying potential machine failures in an industry")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("")
+        # res_button = st.button("**Colab 📔**")
+        mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
+        # if res_button:
+        #     open_link(mpm_colab_rul)
+        st_button('', f'{mpm_colab_rul}',
+                       'Colab 📔', 17)
+    with pro_col2_2:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("**Statistical Analysis Command Line Tool** 📈")
+        st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**", unsafe_allow_html=True)
+        st.markdown("An Interactive command line tool implemented in Scala using SMILE(Statistical Machine Intelligence and Learning Engine) for conducting Statistical analysis on numerical data.")
+        scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
+        st.markdown("")
+        st.markdown("")
 
-         # git_button = st.button("**Github 📊**")
-         # if git_button:
-         #     open_link(scala_url)
-         st_button('', f'{scala_url}',
-                   'Github 📊', 17)
+        # git_button = st.button("**Github 📊**")
+        # if git_button:
+        #     open_link(scala_url)
+        st_button('', f'{scala_url}',
+               'Github 📊', 17)
 
-     with pro_col2_3:
-         st.markdown("")
-         st.markdown("")
-         st.subheader("**UI to display processed images** 🔍")
-         st.markdown("")
-         st.markdown("")
-         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**", unsafe_allow_html=True)
-         st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
-         ui_url = "https://github.com/bhargavi31/UI_designer"
-         st.markdown("")
-         # git_button = st.button("**Github**")
-         # if git_button:
-         #     open_link(ui_url)
-         st_button('', f'{ui_url}',
-                   'Github', 17)
-     pro_col3_1,pro_col3_2,pro_col3_3 = st.columns([1,1,1])
-     with pro_col3_1:
-         st.markdown("")
-         st.markdown("")
-         st.subheader("**Medical Resource Management 🏥**")
-         st.markdown("")
-         st.markdown("")
-         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**",
-                     unsafe_allow_html=True)
-         st.markdown(
-             "An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
-         ui_url = "https://github.com/bhargavi31/UI_designer"
-         st.markdown("")
-         # git_button = st.button("**Github ⚕️**")
-         # if git_button:
-         #     open_link(ui_url)
-         st_button('', f'{ui_url}',
-                   'Github ⚕', 17)
+    with pro_col2_3:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("**UI to display processed images** 🔍")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**", unsafe_allow_html=True)
+        st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
+        ui_url = "https://github.com/bhargavi31/UI_designer"
+        st.markdown("")
+        # git_button = st.button("**Github**")
+        # if git_button:
+        #     open_link(ui_url)
+        st_button('', f'{ui_url}',
+               'Github', 17)
+    pro_col3_1,pro_col3_2,pro_col3_3 = st.columns([1,1,1])
+    with pro_col3_1:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("**Medical Resource Management 🏥**")
+        st.markdown("")
+        st.markdown("")
+        st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**",
+                 unsafe_allow_html=True)
+        st.markdown(
+         "An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
+        ui_url = "https://github.com/bhargavi31/UI_designer"
+        st.markdown("")
+        # git_button = st.button("**Github ⚕️**")
+        # if git_button:
+        #     open_link(ui_url)
+        st_button('', f'{ui_url}',
+               'Github ⚕', 17)
 
 
 
@@ -324,8 +319,8 @@ with pro:
 
 
 with Blog:
-    col1,col2 = st.columns([1,2])
-    with col1:
+    buddi_col1, buddi_col2 = st.columns([1, 2])
+    with buddi_col1:
         st.markdown("")
         st.markdown("")
         st.subheader("Blogs")
@@ -338,7 +333,7 @@ with Blog:
         if res_button:
             open_link(res_url)
 
-    with col2:
+    with buddi_col2:
         lottie_pro = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_vjysv46c.json")
         st_lottie(
             lottie_pro,
@@ -374,7 +369,7 @@ with about:
         st.markdown("")
         st.markdown("**Note:** I am known among my colleagues as a fun and enjoyable person to work with.")
     with col1_2:
-        st.image("Utils/Images/SELF.jpeg", width=320)
+        st.image("Utils/Images/self.png", width=320)
     col1_1,col1_2 = st.columns([1,2])
     with col1_1:
       st.header("Contact Information")
