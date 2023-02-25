@@ -255,7 +255,7 @@ with pro:
         st.markdown("A Machine Learning model with 98% accuracy in identifying potential machine failures in an industry")
         # res_button = st.button("**Colab 📔**")
         mpm_colab_rul = "https://colab.research.google.com/drive/1qX2yBbnwrMkc7Ag0dmAnYmJ_UBkK7ca7?usp=sharing"
-        st.markdown(f"[Read More]({mpm_colab_rul})", unsafe_allow_html=True)
+        st.markdown(f"[Colab Notebook]({mpm_colab_rul})", unsafe_allow_html=True)
         # if res_button:
         #     open_link(mpm_colab_rul)
         #------------------------------------button using css and st_functions.py------------------
@@ -264,16 +264,11 @@ with pro:
     with pro_col2_2:
         st.markdown("")
         st.markdown("")
-        st.subheader("**Statistical Analysis Command Line Tool** 📈")
-        st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**", unsafe_allow_html=True)
-        st.markdown("An Interactive command line tool implemented in Scala using SMILE(Statistical Machine Intelligence and Learning Engine) for conducting Statistical analysis on numerical data.")
-        scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
-        st.markdown(f"[Read More]({scala_url})", unsafe_allow_html=True)
-        # git_button = st.button("**Github 📊**")
-        # if git_button:
-        #     open_link(scala_url)
-        # st_button('', f'{scala_url}',
-        #        'Github 📊', 17)
+        st.subheader("**Satellite Image Data Pipeline with Airflow and Docker**")
+        st.markdown("Category : **<span style='color: orange;'>BigData</span>**", unsafe_allow_html=True)
+        st.markdown(
+            "This project involved building a pipeline using Airflow to scrape satellite image data from a Noaa Amazon S3 bucket and transferring it to our own S3 bucket. The data was then sent to backend APIs which were containerized using Docker, allowing for easy deployment and scalability. A front-end application was built using Streamlit to provide users with access to the data in our S3 bucket.")
+        st.markdown(f"[APP](https://damg-7245-big-data-systems-team11-a1.streamlit.app/)", unsafe_allow_html=True)
 
     with pro_col2_3:
         st.markdown("")
@@ -284,7 +279,7 @@ with pro:
         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**", unsafe_allow_html=True)
         st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
         ui_url = "https://github.com/bhargavi31/UI_designer"
-        st.markdown(f"[Read More]({ui_url})", unsafe_allow_html=True)
+        st.markdown(f"[Github]({ui_url})", unsafe_allow_html=True)
         # git_button = st.button("**Github**")
         # if git_button:
         #     open_link(ui_url)
@@ -302,13 +297,27 @@ with pro:
         st.markdown(
          "An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
         ui_url = "https://github.com/bhargavi31/UI_designer"
-        st.markdown(f"[Read More]({ui_url})",unsafe_allow_html=True)
+        st.markdown(f"[Github]({ui_url})",unsafe_allow_html=True)
         # git_button = st.button("**Github ⚕️**")
         # if git_button:
         #     open_link(ui_url)
         # st_button('', f'{ui_url}',
         #        'Github ⚕', 17)
-
+    with pro_col3_2:
+        st.markdown("")
+        st.markdown("")
+        st.subheader("**Statistical Analysis Command Line Tool** 📈")
+        st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**",
+                    unsafe_allow_html=True)
+        st.markdown(
+            "An Interactive command line tool implemented in Scala using SMILE(Statistical Machine Intelligence and Learning Engine) for conducting Statistical analysis on numerical data.")
+        scala_url = "https://github.com/bhargavi31/CommandLineTool/tree/master/CommandLineTool"
+        st.markdown(f"[Github]({scala_url})", unsafe_allow_html=True)
+        # git_button = st.button("**Github 📊**")
+        # if git_button:
+        #     open_link(scala_url)
+        # st_button('', f'{scala_url}',
+        #        'Github 📊', 17)
 
 
 
