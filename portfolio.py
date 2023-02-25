@@ -366,7 +366,7 @@ with about:
         st.markdown("")
         st.markdown("**Note:** I am known among my colleagues as a fun and enjoyable person to work with.")
     with col1_2:
-        st.image("Utils/Images/self.png", width=320)
+        st.image("Utils/Images/SELF.jpeg", width=320)
     col1_1,col1_2 = st.columns([1,2])
     with col1_1:
       st.header("Contact Information")
