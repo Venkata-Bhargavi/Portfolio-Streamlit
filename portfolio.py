@@ -285,13 +285,15 @@ with pro:
         #     open_link(ui_url)
         # st_button('', f'{ui_url}',
         #        'Github', 17)
+    pro_col3_1_title ,pro_col3_2_title,pro_col3_3_title = st.columns([1,1,1])
+    with pro_col3_1_title:
+        st.subheader("**Medical Resource Management 🏥**")
+    with pro_col3_2_title:
+        st.subheader("**Statistical Analysis Command Line Tool** 📈")
+
+
     pro_col3_1,pro_col3_2,pro_col3_3 = st.columns([1,1,1])
     with pro_col3_1:
-        st.markdown("")
-        st.markdown("")
-        st.subheader("**Medical Resource Management 🏥**")
-        st.markdown("")
-        st.markdown("")
         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**",
                  unsafe_allow_html=True)
         st.markdown(
@@ -304,9 +306,6 @@ with pro:
         # st_button('', f'{ui_url}',
         #        'Github ⚕', 17)
     with pro_col3_2:
-        st.markdown("")
-        st.markdown("")
-        st.subheader("**Statistical Analysis Command Line Tool** 📈")
         st.markdown("Category : **<span style='color: orange;'>Scala Application Development</span>**",
                     unsafe_allow_html=True)
         st.markdown(
