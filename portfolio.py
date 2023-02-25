@@ -60,7 +60,7 @@ with home:
         def open_link(url):
             # webbrowser.open_new_tab(url)
             subprocess.run(["open", url])
-        res_url = "https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing"
+        res_url = "https://drive.google.com/file/d/1LGu7PCsZMTdowrjSnElorSDAWib0iTgr/view?usp=sharing"
         st_button('newsletter','https://drive.google.com/file/d/1YthW-l6dMbe7YmnFPKhNIWiixroTNdaA/view?usp=sharing','RESUME',17)
         #
         # st.markdown(f"""<a href={res_url}><button style="background-color:GreenYellow;">Stackoverflow</button></a>
