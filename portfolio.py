@@ -267,7 +267,7 @@ with pro:
     with pro_col2_2:
         st.markdown("Category : **<span style='color: orange;'>BigData</span>**", unsafe_allow_html=True)
         st.markdown(
-            "This project involved building a pipeline using Airflow to scrape satellite image data from a Noaa Amazon S3 bucket and transferring it to our own S3 bucket. The data was then sent to backend APIs which were containerized using Docker, allowing for easy deployment and scalability. A front-end application was built using Streamlit to provide users with access to the data in our S3 bucket.")
+            "This project involved building a pipeline using Airflow to scrape satellite image data from a Noaa Amazon S3 bucket followed by transferring it to our own S3 bucket. The data was then sent to backend APIs which were containerized using Docker, allowing for easy deployment and scalability. A front-end application was built using Streamlit to provide users with access to the data in our S3 bucket.")
         st.markdown(f"[APP](https://damg-7245-big-data-systems-team11-a1.streamlit.app/)", unsafe_allow_html=True)
 
     with pro_col2_3:
