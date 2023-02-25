@@ -244,13 +244,16 @@ with pro:
     line_col, dummy= st.columns([0.9,0.001])
     with line_col:
         st.write("----------------------------------------------------------------")
+    pro_col2_1_title, pro_col2_2_title, pro_col2_3_title = st.columns([1, 1, 1])
+    with pro_col2_1_title:
+        st.subheader("**Machine Predictive Maintenance** 🏭")
+    with pro_col2_2_title:
+        st.subheader("**Satellite Image Data Pipeline with Airflow and Docker**")
+    with pro_col2_3_title:
+        st.subheader("**UI to display processed images** 🔍")
+
     pro_col2_1, pro_col2_2, pro_col2_3 = st.columns([1, 1, 1])
     with pro_col2_1:
-        st.markdown("")
-        st.markdown("")
-        st.subheader("**Machine Predictive Maintenance** 🏭")
-        st.markdown("")
-        st.markdown("")
         st.markdown("Category : **<span style='color: orange;'>Machine learning</span>**", unsafe_allow_html=True)
         st.markdown("A Machine Learning model with 98% accuracy in identifying potential machine failures in an industry")
         # res_button = st.button("**Colab 📔**")
@@ -262,20 +265,12 @@ with pro:
         # st_button('', f'{mpm_colab_rul}',
         #                'Colab 📔', 17)
     with pro_col2_2:
-        st.markdown("")
-        st.markdown("")
-        st.subheader("**Satellite Image Data Pipeline with Airflow and Docker**")
         st.markdown("Category : **<span style='color: orange;'>BigData</span>**", unsafe_allow_html=True)
         st.markdown(
             "This project involved building a pipeline using Airflow to scrape satellite image data from a Noaa Amazon S3 bucket and transferring it to our own S3 bucket. The data was then sent to backend APIs which were containerized using Docker, allowing for easy deployment and scalability. A front-end application was built using Streamlit to provide users with access to the data in our S3 bucket.")
         st.markdown(f"[APP](https://damg-7245-big-data-systems-team11-a1.streamlit.app/)", unsafe_allow_html=True)
 
     with pro_col2_3:
-        st.markdown("")
-        st.markdown("")
-        st.subheader("**UI to display processed images** 🔍")
-        st.markdown("")
-        st.markdown("")
         st.markdown("Category : **<span style='color: orange;'>Python Application Development</span>**", unsafe_allow_html=True)
         st.markdown("An UI in python using PyQt library to execute image processing operations and displays processed histograms and translated images in widgets to help Computer Vision Engineers analyze model outputs")
         ui_url = "https://github.com/bhargavi31/UI_designer"
