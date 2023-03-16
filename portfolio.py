@@ -332,6 +332,30 @@ with Blog:
                                   " In addition it can be used for maintaining and monitoring the Machine Learning models.  Some of its features are focused and explained in this blog.")
         if res_button:
             open_link(res_url)
+    blog_col2_1,blog_col2_2,blog_col2_3 = st.columns([1,1,1])
+    with blog_col2_1:
+        st.markdown("")
+        st.markdown(
+            "[**Probability Distribution, Part:1 - Medium**  🔗](https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-1-7b1cbdd20542)")
+        res_url = "https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-1-7b1cbdd20542"
+        res_button = st.button("""**🟡 Probability Distribution  🟡 Probability**  🔗"""
+                               "Understanding probability distributions is crucial for making informed decisions in our daily lives, and it's essential to know their applications. This article delves into both commonly used and underrated probability distributions.")
+
+    with blog_col2_2:
+        st.markdown("")
+        st.markdown(
+            "[**Probability Distribution, Part:2 - Medium**  🔗](https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-2-e286cf7cce99)")
+        res_url = "https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-2-e286cf7cce99"
+        res_button = st.button("""**🟡 Probability Distribution  🟡 Probability**  🔗"""
+                               "This part covers Central Limit Theorem, T-test, Poisson Distribution, Exponential Distribution")
+
+    with blog_col2_3:
+        st.markdown("")
+        st.markdown(
+            "[**Probability Distribution, Part:3 - Medium**  🔗](https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-3-dd25d273eda9)")
+        res_url = "https://medium.com/@bhargavi.sikhakolli31/probability-distribution-part-3-dd25d273eda9"
+        res_button = st.button("""**🟡 Probability Distribution  🟡 Probability**  🔗"""
+                               "This part explains Bernoulli Distribution Beta Distribution, T-distribution or Fat-tailed distribution through examples")
 
     with buddi_col2:
         lottie_pro = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_vjysv46c.json")
