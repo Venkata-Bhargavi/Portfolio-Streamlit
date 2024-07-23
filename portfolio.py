@@ -122,6 +122,54 @@ with work_ex:
     st.markdown("")
 
 
+
+
+
+
+    fidr_col1, fidr_col2 = st.columns([1, 1])
+
+    with fidr_col1:
+        st.image("Utils/Images/fid.png")
+    with fidr_col2:
+        st.markdown("**Company** :  FIDELITY Investments")
+        st.markdown("**Job Title** :  Research Collaboration")
+        st.markdown("**Duration** : 04-2024 to *")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view?usp=share_link)")
+        # with st.expander("**Read More**"):
+        #     st.write(
+        #         "- Researched on extracting named entities i.e NER from Electronic Health Records leveraging BILSTM and CRF models resulting in a 30% reduction in medical coding costs")
+        #     st.write(
+        #         "- Devised a more advanced ensemble model for Named Entity Recognition in conversational medical text, using BioBert as a reference model and incorporating contextual information, resulted in a 40% increase in precision compared to previously trained generic models")
+        #     st.write(
+        #         "- Guided a team of 3 in a research project comparing BERT-based algorithms and provided knowledge transfer sessions")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+
+    fid_col1, fid_col2 = st.columns([1, 1])
+
+    with fid_col1:
+        st.image("Utils/Images/fid.png")
+    with fid_col2:
+        st.markdown("**Company** :  FIDELITY Investments")
+        st.markdown("**Job Title** :  Data Scientist")
+        st.markdown("**Duration** : 07-2023 to 12-2023")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view?usp=share_link)")
+        # with st.expander("**Read More**"):
+        #     st.write(
+        #         "- Researched on extracting named entities i.e NER from Electronic Health Records leveraging BILSTM and CRF models resulting in a 30% reduction in medical coding costs")
+        #     st.write(
+        #         "- Devised a more advanced ensemble model for Named Entity Recognition in conversational medical text, using BioBert as a reference model and incorporating contextual information, resulted in a 40% increase in precision compared to previously trained generic models")
+        #     st.write(
+        #         "- Guided a team of 3 in a research project comparing BERT-based algorithms and provided knowledge transfer sessions")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+    st.markdown("")
+
     buddi_col1, buddi_col2 = st.columns([1, 1])
 
     with buddi_col1:
