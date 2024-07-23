@@ -129,8 +129,8 @@ with work_ex:
     with buddi_col2:
         st.markdown("**Company** :  BUDDI AI - a Claritrics Company")
         st.markdown("**Job Title** :  Research Engineer")
-        st.markdown("**Duration** : 08-2020 to 06-2022 **(2 years)**")
-        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view?usp=share_link)")
+        st.markdown("**Duration** : 08-2020 to 06-2022")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1f-DeitZtOxD3Xp8a9-q0fVTx8GJIuKqP/view?usp=share_link)")
         with st.expander("**Read More**"):
             st.write("- Researched on extracting named entities i.e NER from Electronic Health Records leveraging BILSTM and CRF models resulting in a 30% reduction in medical coding costs")
             st.write("- Devised a more advanced ensemble model for Named Entity Recognition in conversational medical text, using BioBert as a reference model and incorporating contextual information, resulted in a 40% increase in precision compared to previously trained generic models")
@@ -146,8 +146,8 @@ with work_ex:
     with buddi2_col2:
         st.markdown("**Company** :  BUDDI AI - a Claritrics Company")
         st.markdown("**Job Title** :  Intern")
-        st.markdown("**Duration** : 06-2020 to 08-2020 **(2 months)**")
-        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1wkhYExQQ4j4CFlyMwBvJyaoEHfP5scUX/view?usp=sharing)")
+        st.markdown("**Duration** : 06-2020 to 08-2020")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1wkhYExQQ4j4CFlyMwBvJyaoEHfP5scUX/view?usp=sharing)")
         with st.expander("**Read More**"):
             st.write("- Developed an interactive command-line tool for conducting statistical analysis on numerical data using Scala and SMILE (Statistical Machine Intelligence and Learning Engine) package")
             st.write("- Tool allows users to select specific features for analysis and perform a variety of operations, such as mean, median and standard deviation")
@@ -161,9 +161,9 @@ with work_ex:
         st.image("Utils/Images/conti.png")
     with conti_col2:
         st.markdown("**Company** :  Continental Automotive India Pvt Ltd")
-        st.markdown("**Job Title** :  Research Intern in Artificial Intelligence and Robotics Labs")
-        st.markdown("**Duration** : 08-2019 to 04-2020 **(10 months)**")
-        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1TuW2FPYaa5Tv3NX4_zueALg2xAQYLy-3/view?usp=sharing)")
+        st.markdown("**Job Title** :  Applied AI/ML Research Engineer in Artificial Intelligence and Robotics Labs")
+        st.markdown("**Duration** : 08-2019 to 04-2020")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1TuW2FPYaa5Tv3NX4_zueALg2xAQYLy-3/view?usp=sharing)")
         with st.expander("**Read More**"):
             st.write("- Synthetic Voice Emotion Generation – A data generator to generate voice of multiple emotions other than input voice, it is intended to completely reduce manual efforts in collecting data from individuals")
             st.write("- The generator is trained on a CycleGAN model using voice data of different emotions and generates synthetic data that can be consumed by computer vision researchers in model training. The model’s generated voices are ~75% in comparison to human voices")
@@ -179,8 +179,8 @@ with work_ex:
     with confirm_col2:
         st.markdown("**Company** :  ConfirmTKT")
         st.markdown("**Job Title** :  Android Developer Intern")
-        st.markdown("**Duration** : 05-2019 to 06-2019 **(1 month)**")
-        st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1E1HDQwe7_M4Y-N0OmDRLxrhq_VmBb4jh/view?usp=sharing)")
+        st.markdown("**Duration** : 05-2019 to 06-2019")
+        # st.markdown("**Certificate** :  [Click Here](https://drive.google.com/file/d/1E1HDQwe7_M4Y-N0OmDRLxrhq_VmBb4jh/view?usp=sharing)")
         with st.expander("Read More"):
             st.write("- Created a user-friendly interface for a recharge module by utilizing API calls and seamlessly integrating with a payment portal")
             st.write("- Leveraged XML in Android Studio to design and develop the interface for the recharge module")
